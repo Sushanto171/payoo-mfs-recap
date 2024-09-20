@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" id="html" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Payoo-mfs</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera">
+
+            </div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-1">
+                    <div class="text-right pr-5 scroll-mt-10 w-full mb-10">
+                        <button id="theme" class="btn ">theme</button>
+                    </div>
+                <!-- log in start -->
+                <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-semibold">Phone Number</span>
+                        </label>
+                        <input id="input-phone" type="text" placeholder="phone number" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-semibold">Pin</span>
+                        </label>
+                        <input id="login-password" type="password" placeholder="password" class="input input-bordered" required />
+                        <label class="label mt-4">
+                          <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                        </label>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="login-button" class="btn btn-primary font-semibold">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                <!-- log in end -->
+              </div>
+            </div>
+          </div>
+    </main>
+
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
