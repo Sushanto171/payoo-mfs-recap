@@ -29,9 +29,10 @@
                 <!-- account balance end -->
                  <div class="divider"></div>
                  <!-- features section start -->
-                  <div>
+                  <div class="grid grid-cols-3 gap-2 px-3">
                     <button id="add-money" class="btn btn-lg">Add Money</button>
                     <button id="cash-out" class="btn btn-lg">Cash Out</button>
+                    <button id="transaction-button" class="btn btn-lg">Transaction</button>
                   </div>
                  <!-- features section end -->
                   <div class="divider"></div>
@@ -59,13 +60,20 @@
                     </form>
                   </div>
                   <!-- add money section  end -->
-                   <!-- cash out section star -->
+                   <!-- transaction section start -->
+                    <div id="transaction-form" class="hidden">
+                      <h2>
+                        <div class="text-5xl text-center">Transaction History</div>
+                      </h2>
+                    </div>
+                   <!-- transaction section end -->
               </div>
             </div>
           </div>
     </main>
 
     <script src="./js/utilities.js"></script>
+    <script src="./js/features.js"></script>
     <script src="./js/home.js"></script>
 </body>
 

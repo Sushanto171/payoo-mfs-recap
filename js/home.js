@@ -1,14 +1,3 @@
-const inputAmount =getElementByIdValue('input-amount');
-document.getElementById('add-money').addEventListener('click', function(){
-document.getElementById('form').classList.remove('hidden')
-    document.getElementById('action-button').innerText = 'Add Money';
-    document.getElementById('input-amount').setAttribute('placeholder', 'Add Money')
-})
-document.getElementById('cash-out').addEventListener('click', function(){
-    document.getElementById('form').classList.remove('hidden')
-    document.getElementById('action-button').innerText = 'Cash Out';
-    document.getElementById('input-amount').setAttribute('placeholder', 'Cash out amount')
-})
 
 const actionButton = document.getElementById('action-button')
 actionButton.addEventListener("click", function(event){

@@ -23,3 +23,11 @@ function getElementByIdInnerText(id){
 function getElementByIdInnerDelete(id){
     return  document.getElementById(id).value = '';
 }
+
+function showSectionById(id){
+    // hide all the sections
+    document.getElementById('form').classList.add('hidden');
+    document.getElementById('transaction-form').classList.add('hidden');
+    // Show the section with the  provide id as parameter
+    document.getElementById(id).classList.remove('hidden');
+}
