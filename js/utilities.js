@@ -31,3 +31,24 @@ function showSectionById(id){
     // Show the section with the  provide id as parameter
     document.getElementById(id).classList.remove('hidden');
 }
+
+function showTransaction(Amount, NewBalance, condition){
+    const transactionId = Math.random();
+    const p = document.createElement('p');
+    const br = document.createElement('br');
+    const currentDate = new Date();
+    if(condition ==='Add Money'){
+        p.innerText =`Added: ${Amount} Tk. New Balance ${NewBalance} Tk.
+         Date: ${currentDate.getDate()}-${currentDate.getDay()}-${currentDate.getFullYear()}.(${currentDate.getSeconds()}sec.-${currentDate.getMinutes()}min.-${currentDate.getHours()}hr.)
+         Transaction ID: #${transactionId}`;
+        document.getElementById('transaction-container').append( br, p);
+        return;
+    }
+    else if(condition ==='Cash Out'){
+        p.innerText =`Cash Out: ${Amount} Tk. New Balance ${NewBalance} Tk.
+        Date: ${currentDate.getDate()}-${currentDate.getDay()}-${currentDate.getFullYear()}.(${currentDate.getSeconds()}sec.-${currentDate.getMinutes()}min.-${currentDate.getHours()}hr.)
+        Transaction ID: #${transactionId}`;
+       document.getElementById('transaction-container').append(br, p);
+       return;
+    }
+}

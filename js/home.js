@@ -14,6 +14,7 @@ actionButton.addEventListener("click", function(event){
     if(actionButton.innerText === 'Add Money' && password ===1234){
         const updateBalance = accountBalance + inputAmount;
         document.getElementById('account-balance').innerText = updateBalance;
+        showTransaction(inputAmount, updateBalance,'Add Money');
     }
     else if(actionButton.innerText === 'Cash Out' && password ===1234){
         if(accountBalance < inputAmount){
@@ -24,6 +25,7 @@ actionButton.addEventListener("click", function(event){
         }
         const updateBalance = accountBalance - inputAmount;
         document.getElementById('account-balance').innerText = updateBalance;
+        showTransaction(inputAmount, updateBalance,'Cash Out');
     }
     else{
         alert('Please try again.')
