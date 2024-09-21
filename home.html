@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo-mfs- Home page</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -15,30 +15,51 @@
         <div class="mockup-phone">
             <div class="camera"></div>
             <div class="display">
-              <div class="artboard artboard-demo phone-3">
+              <div class="artboard artboard-demo phone-3 overflow-x-auto pt-40">
                 <div class="text-right pr-5 w-full mb-5">
                     <button id="theme" class="btn bg-gray-500">theme</button>
                 </div>
                 <!-- account balance start -->
-                <div class="stats shadow">
-                    <div class="stat">
+                 <div class="px-6 grid grid-cols-2 justify-between items-center w-full ">
+                  <div class="flex">
+                    <div><img src="./assets/image 2.png" alt=""></div>
+                    <div>
+                      <div  class="font-black text-2xl">$<span id="account-balance">9400</span></div>
                       <div class="stat-title">Account Balance</div>
-                      <div id="account-balance" class="stat-value">9400</div>
                     </div>
                   </div>
+                     <div class="text-right ">
+                      <button class="btn hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/Frame.png" alt=""> Log Out</button>
+                     </div>
+                 </div>
                 <!-- account balance end -->
                  <div class="divider"></div>
                  <!-- features section start -->
+                  <div class="w-11/12 mx-auto space-y-2 mb-3">
+                    <h3 class="font-bold text-2xl">🔥Welcome to Payooo!</h3>
+                    <p>
+                      Enjoy easy and convenient financial services with us. Cashout charge is low and 
+                    </p>
+                  </div>
                   <div class="grid grid-cols-3 gap-2 px-3">
-                    <button id="add-money" class="btn btn-lg">Add Money</button>
-                    <button id="cash-out" class="btn btn-lg">Cash Out</button>
-                    <button id="transaction-button" class="btn btn-lg">Transaction</button>
+                    <button id="add-money" class=" bg-gray-50 rounded-md flex flex-col gap-1 items-center py-4 border-2 border-gray-300  text-sm hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/Group.png" alt=""> <span class="">Add Money</span></button>
+                    <button id="cash-out" class="bg-gray-50 rounded-md flex flex-col gap-1 items-center py-4 border-2 border-gray-300  text-sm hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/send 1.png" alt=""><span>Cash Out</span></button>
+                    <button id="transaction-button" class="bg-gray-50 rounded-md flex flex-col gap-1 items-center py-4 border-2 border-gray-300 px-6 text-sm hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/transaction 1.png" alt=""><span>Transaction</span></button>
+                    <button id="get-bonus" class="bg-gray-50 rounded-md flex flex-col gap-1 items-center py-4 border-2 border-gray-300  text-sm hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/financial 1.png" alt=""><span>Get Bonus</span></button>
+                    <button id="pay-bill" class="bg-gray-50 rounded-md flex flex-col gap-1 items-center py-4 border-2 border-gray-300  text-sm hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/purse 1.png" alt=""><span>Pay Bill</span></button>
+                    <button id="transfer-money" class="bg-gray-50 rounded-md flex flex-col gap-1 items-center py-4 border-2 border-gray-300 px-0 text-sm hover:border-blue-400 hover:text-blue-400 hover:bg-blue-50"><img src="./assets/money 1.png" alt=""><span>Transfer Money</span></button>
                   </div>
                  <!-- features section end -->
                   <div class="divider"></div>
                   <!-- add money section  start -->
-                  <div id="form" class="hidden card bg-base-100 max-w-sm shrink-0 shadow-2xl">
-                    <form class="card-body">
+                  <div id="form" class="hidden card bg-base-100 max-w-sm shrink-0 shadow-2xl mb-4">
+                    <form class="card-body">    
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text font-semibold">Bank account number</span>
+                        </label>
+                        <input id="input-" type="number" placeholder="inter 11 digit number" class="input input-bordered" required />
+                      </div>
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text font-semibold">Amount</span>
@@ -49,7 +70,10 @@
                         <label class="label">
                           <span class="label-text font-semibold">Pin</span>
                         </label>
-                        <input id="password" type="password" placeholder="password" class="input input-bordered" required />
+                        <div class="relative">
+                          <input id="password" type="password" placeholder="password" class="input input-bordered" required />
+                          <button  class="show-pass-btn absolute right-2 pt-3"><i class="fa-regular fa-eye"></i></button>
+                        </div>
                         <label class="label mt-4">
                           <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
                         </label>
@@ -61,13 +85,109 @@
                   </div>
                   <!-- add money section  end -->
                    <!-- transaction section start -->
-                    <div id="transaction-form" class="hidden">
+                    <div id="transaction-form" class="hidden w-full">
                       <div >
                         <h2 class="text-3xl text-center">Transaction History</h2>
                       </div>
-                      <div id="transaction-container"></div>
+                      <div id="transaction-container" class=" h-60 overflow-y-auto w-11/12 mx-auto text-center"></div>
                     </div>
                    <!-- transaction section end -->
+                    <!-- get bonus section start -->
+                     <div id="get-bonus-form" class="hidden mb-4">
+                      <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Enter Bonus Coupon</span>
+                            </label>
+                            <input id="" type="text" placeholder="Enter your coupon" class="input input-bordered"  required/>
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="get-bonus-button" class="btn btn-primary font-semibold">Get Bonus</button>
+                          </div>
+                        </form>
+                      </div>
+                     </div>
+                    <!-- get bonus section end -->
+                    <!-- pay bill section start -->
+                     <div id="pay-bill-form" class="hidden mb-4">
+                      <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Select To Pay</span>
+                            </label>
+                            <select name="Select Bank"  id="" class=" border border-gray-300 rounded-md px-3 py-3 text-gray-500" >
+                              <option value="selectBank" disabled selected>Select Bank</option>
+                              <option value="tBank">Janata Bank</option>
+                              <option value="selctBank">Janata Bank</option>
+                              <option value="sectBank">Janata Bank</option>
+                            </select>
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Biller Account Number</span>
+                            </label>
+                            <input id="" type="text" placeholder="Enter account number" class="input input-bordered"  required/>
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Amount to Pay</span>
+                            </label>
+                            <input id="" type="text" placeholder="Add Amount to pay" class="input input-bordered"  required/>
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Pin</span>
+                            </label>
+                            <div class="relative">
+                              <input id="" type="password" placeholder="password" class="input input-bordered" required />
+                              <button   class="show-pass-btn absolute right-2 pt-3"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="pay-bill-button" class="btn btn-primary font-semibold">Pay Bill</button>
+                          </div>
+                        </form>
+                      </div>
+                     </div>
+                    <!-- pay bill section end -->
+                    <!-- transfer section start -->
+                     <div id="transfer-money-form" class="hidden mb-4">
+                      <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">User Account Number</span>
+                            </label>
+                            <input id="" type="text" placeholder="Enter 11 digit number" class="input input-bordered"  required/>
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Amount</span>
+                            </label>
+                            <input id="" type="text" placeholder="Enter amount to transfer" class="input input-bordered"  required/>
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                              <span class="label-text font-semibold">Pin</span>
+                            </label>
+                            <div class="relative">
+                              <input id="" type="password" placeholder="password" class="input input-bordered" required />
+                              <button  class="show-pass-btn absolute right-2 pt-3"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+    
+                            <label class="label mt-4">
+                              <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                            </label>
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="send-money-button" class="btn btn-primary font-semibold">Send Money</button>
+                          </div>
+                        </form>
+                      </div>
+                     </div>
+                    <!-- transfer section end -->
               </div>
             </div>
           </div>

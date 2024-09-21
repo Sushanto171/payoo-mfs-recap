@@ -1,6 +1,7 @@
-
+let num =0;
 const actionButton = document.getElementById('action-button')
 actionButton.addEventListener("click", function(event){
+    num += 1
     event.preventDefault();
     const inputAmount =getElementByIdValue('input-amount');
     const accountBalance = getElementByIdInnerText('account-balance');
@@ -33,3 +34,17 @@ actionButton.addEventListener("click", function(event){
     getElementByIdInnerDelete('password');
     getElementByIdInnerDelete( 'input-amount');
 })
+// get bonus
+document.getElementById('get-bonus-button').addEventListener('click', function(event){
+    event.preventDefault();
+    console.log('get -bonus')
+})
+document.getElementById('pay-bill-button').addEventListener('click', function(event){
+    event.preventDefault();
+    console.log('pay -bonus')
+})
+document.getElementById('send-money-button').addEventListener('click', function(event){
+    event.preventDefault();
+    console.log('transfer-bonus')
+})
+

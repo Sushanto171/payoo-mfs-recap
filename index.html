@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Payoo-mfs</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -16,11 +16,19 @@
             <div class="camera">
 
             </div>
-            <div class="display">
-                <div class="artboard artboard-demo phone-1">
-                    <div class="text-right pr-5 scroll-mt-10 w-full mb-10">
-                        <button id="theme" class="btn ">theme</button>
-                    </div>
+            <div class="display relative">
+              <div class="artboard artboard-demo phone-1">
+                <div class="text-right pr-5 scroll-mt-10 w-full mb-0 z-40">
+                  <button id="theme" class="btn ">theme</button>
+                </div>
+                <!-- ui section start -->
+                <div class="absolute top-16  z-0">
+                  <img src="./assets/Rectangle 1.png" alt="" class="w-52">
+                </div>
+                <div class="mb-4">
+                  <img src="./assets/image 2.png" alt="" class="w-16">
+                </div>
+                <!-- ui section end -->
                 <!-- log in start -->
                 <div class="card bg-base-100 max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
@@ -28,13 +36,17 @@
                         <label class="label">
                           <span class="label-text font-semibold">Phone Number</span>
                         </label>
-                        <input id="input-phone" type="text" placeholder="phone number" class="input input-bordered" required />
+                        <input id="input-phone" type="text" placeholder="phone number" class="input input-bordered"  required/>
                       </div>
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text font-semibold">Pin</span>
                         </label>
-                        <input id="login-password" type="password" placeholder="password" class="input input-bordered" required />
+                        <div class="relative">
+                          <input id="password" type="password" placeholder="password" class="input input-bordered" required />
+                          <button  class="show-pass-btn absolute right-2 pt-3"><i class="fa-regular fa-eye"></i></button>
+                        </div>
+
                         <label class="label mt-4">
                           <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
                         </label>
